@@ -27,7 +27,7 @@
 	  padding-right: 10px;
   }
     </style>
-  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); border: solid black; border-radius: 18px; width: 600px"; onclick="playAudio('sounds/bubblesClipped.mp3')" class="welcome">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); border: solid black; border-radius: 18px; width: 600px"; onclick="playAudio('sounds/bubblesClipped.mp3')" class="welcome">
       <h1>FishOS</h1>
       <h3>A WebOS by fish-in-a-puddle</h3>
       <img style="width: 195px; height: 138px" src="images/FishOS1.png"/>
@@ -40,8 +40,8 @@
       <p>But if you want to stick around, suit yourself. Just remember that I am not legally responsible for any injuries, mental or physical, that may occur yadda yadda you know.</p>
 
     <a href="https://stardance.hackclub.com/@just-a-fish">Anyways I like to talk if you want to say hi</a>
-  </div>
-  <div style="position: absolute; width: 97.5%; height: 30px; display: flex; background-color: rgba(119, 196, 224, 1.0); color: #000000; border: solid; border-radius: 6px; border-color: black; justify-content: space-between; align-items: center" class="topBar">
+    </div>
+    <div style="position: absolute; width: 97.5%; height: 30px; display: flex; background-color: rgba(119, 196, 224, 1.0); color: #000000; border: solid; border-radius: 6px; border-color: black; justify-content: space-between; align-items: center" class="topBar">
     <p style="margin-left: 16px;">
             FishOS
         </p> 
@@ -50,9 +50,13 @@
         </p>
 	 </div>
 	 <script>
-      var currentTime = new Date().toLocaleString();
-      var timeText = document.querySelector("#timeElement");
-      timeText.innerHTML = currentTime
-	</script>
+		function updateTime() {
+        var currentTime = new Date().toLocaleString();
+        var timeText = document.querySelector("#timeElement");
+        timeText.innerHTML = currentTime;
+		}
+		setInterval(updateTime, 1000);
+    </script>
+    <script src="script.js"></script>
   </body>
 </html>
