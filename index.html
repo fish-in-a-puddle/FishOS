@@ -14,9 +14,9 @@
 	  background-size: cover;
     }
 	.topBar {
-		padding-right: 10px;
 		background-image: url("images/swimmingFish.gif");
 		background-size: 45px;
+		text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 	}
   .welcome {
     margin: auto;
@@ -27,10 +27,10 @@
 	  padding-right: 10px;
   }
     </style>
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); border: solid black; border-radius: 18px; width: 600px"; onclick="playAudio('sounds/bubblesClipped.mp3')" class="welcome">
+    <div id="welcome"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); border: solid black; border-radius: 18px; width: 600px"; class="welcome">
       <h1>FishOS</h1>
       <h3>A WebOS by fish-in-a-puddle</h3>
-      <img style="width: 195px; height: 138px" src="images/FishOS1.png"/>
+      <img style="width: 195px; height: 138px" src="images/FishOS1.png" onclick="playAudio('sounds/bubblesClipped.mp3')"/>
       <script type="text/javascript">
       function playAudio(audioClip) {
       new Audio(audioClip).play();
