@@ -30,7 +30,12 @@
     <div id="welcome"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); border: solid black; border-radius: 18px; width: 600px"; class="welcome">
       <div style="display: flex; justify-content: space-between; align-items: flex-start">
         <img style="width: 40px; height: 40px"src="images/handle.png" id="welcomeheader"/> 
-        <img style="cursor: pointer; height: 40px; width: 80px;" src="images/dead-fish.png" id="welcomeclose"/>
+        <img style="cursor: pointer; height: 40px; width: 80px;" src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="welcomeclose"/>
+        <script type="text/javascript">
+      function playAudio(audioClip) {
+      new Audio(audioClip).play();
+      }
+	  </script>
       </div>
       <h1>FishOS</h1>
       <h3>A WebOS by fish-in-a-puddle</h3>
@@ -42,11 +47,10 @@
       </script>
       <p>Welcome, welcome. You're probably wondering why I've gathered you all here today. Well, I didn't. You all came here of your own free will and terrible judgement.</p>
       <p>But if you want to stick around, suit yourself. Just remember that I am not legally responsible for any injuries, mental or physical, that may occur yadda yadda you know.</p>
-
-    <a href="https://stardance.hackclub.com/@just-a-fish">Anyways I like to talk if you want to say hi</a>
+      <a href="https://stardance.hackclub.com/@just-a-fish">Anyways I like to talk if you want to say hi</a>
     </div>
     <div style="position: absolute; width: 97.5%; height: 30px; display: flex; background-color: rgba(119, 196, 224, 1.0); color: #000000; border: solid; border-radius: 6px; border-color: black; justify-content: space-between; align-items: center" class="topBar">
-    <p id="welcomeOpen" style="margin-left: 16px;">
+        <p id="welcomeOpen" style="margin-left: 16px;">
             FishOS
         </p> 
         <p id="timeElement"; style="margin-right: 28px;">
