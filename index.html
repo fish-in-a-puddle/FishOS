@@ -28,7 +28,10 @@
   }
     </style>
     <div id="welcome"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); border: solid black; border-radius: 18px; width: 600px"; class="welcome">
-      <img style="width: 40px; height: 40px"src="images/handle.png" id="welcomeheader"/> 
+      <div style="display: flex; justify-content: space-between; align-items: flex-start">
+        <img style="width: 40px; height: 40px"src="images/handle.png" id="welcomeheader"/> 
+        <img style="cursor: pointer; height: 40px; width: 80px;" src="images/dead-fish.png" id="welcomeclose"/>
+      </div>
       <h1>FishOS</h1>
       <h3>A WebOS by fish-in-a-puddle</h3>
       <img style="width: 195px; height: 138px" src="images/FishOS1.png" onclick="playAudio('sounds/bubblesClipped.mp3')"/>
@@ -43,7 +46,7 @@
     <a href="https://stardance.hackclub.com/@just-a-fish">Anyways I like to talk if you want to say hi</a>
     </div>
     <div style="position: absolute; width: 97.5%; height: 30px; display: flex; background-color: rgba(119, 196, 224, 1.0); color: #000000; border: solid; border-radius: 6px; border-color: black; justify-content: space-between; align-items: center" class="topBar">
-    <p style="margin-left: 16px;">
+    <p id="welcomeOpen" style="margin-left: 16px;">
             FishOS
         </p> 
         <p id="timeElement"; style="margin-right: 28px;">
