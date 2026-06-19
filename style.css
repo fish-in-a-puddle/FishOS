@@ -22,3 +22,18 @@
     width: 40px; 
     height: 40px;
 }
+.border {
+  position: relative;
+  border: 5px solid rgb(0, 0, 0);  
+  margin: 20px;
+}
+.border:after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: #77C4E0;
+  z-index: -1;
+}
