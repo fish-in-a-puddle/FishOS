@@ -3,6 +3,8 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Lacquer&family=Libertinus+Keyboard&display=swap" rel="stylesheet">
+    <script type="module" src="./script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body style="background-color: #000000">
     <style>
@@ -18,19 +20,11 @@
 		background-size: 45px;
 		text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 	}
-  .welcome {
-    margin: auto;
-    background-color: #77C4E0;
-    text-align: center;
-	  padding-bottom: 10px;
-	  padding-left: 10px;
-	  padding-right: 10px;
-  }
     </style>
-    <div id="welcome"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); border: solid black; border-radius: 18px; width: 600px"; class="welcome">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start">
-        <img style="width: 40px; height: 40px"src="images/handle.png" id="welcomeheader"/> 
-        <img style="cursor: pointer; height: 40px; width: 80px;" src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="welcomeclose"/>
+    <div id="welcome"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px"; class="window">
+      <div class="header">
+        <img class="handle" src="images/handle.png" id="welcomehandle"/> 
+        <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="welcomeclose"/>
         <script type="text/javascript">
       function playAudio(audioClip) {
       new Audio(audioClip).play();

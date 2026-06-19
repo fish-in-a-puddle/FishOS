@@ -1,0 +1,24 @@
+.closeButton {
+	cursor: pointer; 
+    height: 40px; 
+    width: 80px;
+}
+.window {
+    border: solid black; 
+    border-radius: 18px;
+    margin: auto;
+    background-color: #77C4E0;
+    text-align: center;
+    padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start;
+}
+.handle {
+    width: 40px; 
+    height: 40px;
+}
