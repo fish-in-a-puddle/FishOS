@@ -26,5 +26,10 @@
 	border: solid black;
     text-align: center; 
     padding: 16px; 
-    width: fit-content
+    width: fit-content;
+}
+.desktopApp {
+    text-align: center; 
+    padding: 16px; 
+    width: fit-content;
 }
