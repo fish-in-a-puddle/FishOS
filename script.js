@@ -72,3 +72,19 @@ var selectedIcon = undefined
     element.classList.add("selected");
     selectedIcon = element;
     }
+    function deselectIcon(element) {
+      element.classList.add("selected");
+      selectedIcon = undefined;
+    }
+    function handleIconTap(element) {
+      if (element.classList.contains("selected")) {
+        deselectIcon(element);
+        openWindow(window)
+      }
+      else {
+        selectIcon(element);
+      }
+    }
+    function playAudio(audioClip) {
+      new Audio(audioClip).play();
+    }
