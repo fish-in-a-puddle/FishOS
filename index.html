@@ -51,8 +51,15 @@
             Time
         </p>
 	 </div>
-   <div class="desktopApp" id="Fish Notes" style="padding-top: 40px; padding-left: 40px">
-    <div style="text-align: center; padding: 16px; width: fit-content">
+   <div class="desktopApp" id="FishNotes" style="padding-top: 40px; padding-left: 40px" onclick="selectIcon(FishNotes)">
+    <script>
+    var selectedIcon = undefined
+    function selectIcon(element) {
+    element.classList.add("selected");
+    selectedIcon = element;
+    }
+    </script>
+    <div style="text-align: center; padding: 16px; width: 90px">
       <img src="images/fishNotes.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px ">
       <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Notes</strong></p>
     </div>

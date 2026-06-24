@@ -67,3 +67,8 @@ welcomeScreenClose.addEventListener("click", function() {
 welcomeScreenOpen.addEventListener("click", function() {
   openWindow(welcomeScreen);
 });
+var selectedIcon = undefined
+    function selectIcon(element) {
+    element.classList.add("selected");
+    selectedIcon = element;
+    }
