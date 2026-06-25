@@ -74,10 +74,10 @@ welcomeScreenOpen.addEventListener("click", function() {
 var FishNotesScreenClose = document.querySelector("#FishNotesclose")
 var FishNotesScreenOpen = document.querySelector("#FishNotesopen")
 FishNotesScreenClose.addEventListener("click", function() {
-  closeWindow(FishNotesScreen);
+  closeWindow(FishNotes);
 });
 FishNotesScreenOpen.addEventListener("click", function() {
-  openWindow(FishNotesScreen);
+  openWindow(FishNotes);
 });
 //Handle whether or not an icon is selected and what to do with it
 var selectedIcon = undefined

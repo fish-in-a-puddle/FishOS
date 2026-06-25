@@ -15,6 +15,7 @@
     font-style: normal;
     background-image: url("images/fishbg.gif");
 	  background-size: cover;
+    cursor: url('images/fish-cursor.png'), default;
     }
 	.topBar {
 		background-image: url("images/swimmingFish.gif");
@@ -50,20 +51,35 @@
         </p>
 	 </div>
    <!--App icon container-->
-   <div style="padding-top: 40px; padding-left: 40px; padding-right: 40px; padding-bottom: 40px">
+   <div style="padding-top: 40px; padding-left: 40px; padding-right: 40px; padding-bottom: 40px; display: flex; flex-wrap: wrap; justify-content: flex-start;">
     <!--Fish Notes app icon-->
     <div class="desktopApp" id="FishNotesIcon" style="text-align: center; padding: 16px; width: 90px">
       <img src="images/fishNotes.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FishNotesIcon); playAudio('sounds/bubblesRising.mp3')"">
       <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Notes</strong></p>
     </div>
+    <!--Finances Icon-->
+    <div class="desktopApp" id="FinancesIcon" style="text-align: center; padding: 16px; width: 90px">
+      <img src="images/money-fish.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FishNotesIcon); playAudio('sounds/bubblesRising.mp3')"">
+      <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Finances</strong></p>
+    </div>
+    <!--Files Icon-->
+    <div class="desktopApp" id="FilesIcon" style="text-align: center; padding: 16px; width: 90px">
+      <img src="images/fish-folder.png" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FishNotesIcon); playAudio('sounds/bubblesRising.mp3')"">
+      <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Files</strong></p>
+    </div>
+    <!--Game icon-->
+    <div class="desktopApp" id="GameIcon" style="text-align: center; padding: 16px; width: 90px">
+      <img src="images/fishbowl-pixel.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FishNotesIcon); playAudio('sounds/bubblesRising.mp3')"">
+      <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Clicker</strong></p>
+    </div>
    </div>
    <!--Fish Notes app window-->
-   <div id="FishNotes" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px"; class="window">
+   <div id="FishNotes" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px; display: none" class="window">
     <div class="header" id="FishNotesheader">
         <img class="handle" src="images/handle.png" id="FishNoteshandle"/> 
         <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="FishNotesclose"/>
     </div>
-    <h1>Fish Notes</h1>
+    <h3>Fish Notes</h3>
    </div>
    <!--Script for updating time-->
 	 <script>
