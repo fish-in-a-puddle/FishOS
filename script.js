@@ -53,6 +53,7 @@ function dragElement(element) {
     document.onmousemove = null;
   }
 }
+//Make it possible to open and close welcome screen
 var welcomeScreen = document.querySelector("#welcome")
 var FishNotesScreen = document.querySelector("#FishNotes")
 function closeWindow(element) {
@@ -69,6 +70,7 @@ welcomeScreenClose.addEventListener("click", function() {
 welcomeScreenOpen.addEventListener("click", function() {
   openWindow(welcomeScreen);
 });
+//Make it possible to open and close Fish Notes screen
 var FishNotesScreenClose = document.querySelector("#FishNotesclose")
 var FishNotesScreenOpen = document.querySelector("#FishNotesopen")
 FishNotesScreenClose.addEventListener("click", function() {
@@ -77,6 +79,7 @@ FishNotesScreenClose.addEventListener("click", function() {
 FishNotesScreenOpen.addEventListener("click", function() {
   openWindow(FishNotesScreen);
 });
+//Handle whether or not an icon is selected and what to do with it
 var selectedIcon = undefined
     function selectIcon(element) {
     element.classList.add("selected");
