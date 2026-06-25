@@ -21,6 +21,7 @@
 		text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 	}
     </style>
+    <!--Welcome window-->
     <div id="welcome"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px"; class="window">
       <div class="header">
         <img class="handle" src="images/handle.png" id="welcomehandle"/> 
@@ -38,6 +39,7 @@
       <p>But if you want to stick around, suit yourself. Just remember that I am not legally responsible for any injuries, mental or physical, that may occur yadda yadda you know.</p>
       <a href="https://stardance.hackclub.com/@just-a-fish">Anyways I like to talk if you want to say hi</a>
     </div>
+    <!--Top bar-->
     <div style="position: absolute; width: 97.5%; height: 30px; display: flex; background-color: rgba(119, 196, 224, 1.0); color: #000000; border: solid; border-radius: 6px; border-color: black; justify-content: space-between; align-items: center" class="topBar">
         <p id="welcomeOpen" style="margin-left: 16px;">
             FishOS
@@ -46,19 +48,23 @@
             Time
         </p>
 	 </div>
+   <!--App icon container-->
    <div style="padding-top: 40px; padding-left: 40px">
+    <!--Fish Notes app icon-->
     <div class="desktopApp" id="FishNotesIcon" style="text-align: center; padding: 16px; width: 90px">
       <img src="images/fishNotes.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FishNotesIcon); playAudio('sounds/bubblesRising.mp3')"">
       <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Notes</strong></p>
     </div>
    </div>
+   <!--Fish Notes app window-->
    <div id="FishNotes" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px"; class="window">
-    <div class="header">
-        <img class="handle" src="images/handle.png" id="welcomehandle"/> 
-        <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="welcomeclose"/>
+    <div class="header" id="FishNotesheader">
+        <img class="handle" src="images/handle.png" id="FishNoteshandle"/> 
+        <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="FishNotesclose"/>
     </div>
     <h1>Fish Notes</h1>
    </div>
+   <!--Script for updating time-->
 	 <script>
 		function updateTime() {
         var currentTime = new Date().toLocaleString();
@@ -67,6 +73,7 @@
 		}
 		setInterval(updateTime, 1000);
     </script>
+    <!--Run big script-->
     <script src="script.js"></script>
   </body>
 </html>
