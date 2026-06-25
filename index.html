@@ -52,6 +52,13 @@
       <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Notes</strong></p>
     </div>
    </div>
+   <div id="FishNotes" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px"; class="window">
+    <div class="header">
+        <img class="handle" src="images/handle.png" id="welcomehandle"/> 
+        <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="welcomeclose"/>
+    </div>
+    <h1>Fish Notes</h1>
+   </div>
 	 <script>
 		function updateTime() {
         var currentTime = new Date().toLocaleString();
