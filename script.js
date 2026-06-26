@@ -1,6 +1,7 @@
 // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("FishNotes"));
+dragElement(document.getElementById("Game"));
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
@@ -78,6 +79,15 @@ FishNotesScreenClose.addEventListener("click", function() {
 });
 FishNotesScreenOpen.addEventListener("click", function() {
   openWindow(FishNotes);
+});
+//Make it possible to open and close game screen
+var GameScreenClose = document.querySelector("#FishNotesclose")
+var GameScreenOpen = document.querySelector("#FishNotesopen")
+GameScreenClose.addEventListener("click", function() {
+  closeWindow(Game);
+});
+GameScreenOpen.addEventListener("click", function() {
+  openWindow(Game);
 });
 //Handle whether or not an icon is selected and what to do with it
 var selectedIcon = undefined
