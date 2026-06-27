@@ -59,22 +59,22 @@
     </div>
     <!--Finances Icon-->
     <div class="desktopApp" id="FinancesIcon" style="text-align: center; padding: 16px; width: 90px">
-      <img src="images/money-fish.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FishNotesIcon); playAudio('sounds/bubblesRising.mp3')"">
+      <img src="images/money-fish.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FinancesIcon); playAudio('sounds/bubblesRising.mp3')"">
       <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Finances</strong></p>
     </div>
     <!--Files Icon-->
     <div class="desktopApp" id="FilesIcon" style="text-align: center; padding: 16px; width: 90px">
-      <img src="images/fish-folder.png" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FishNotesIcon); playAudio('sounds/bubblesRising.mp3')"">
+      <img src="images/fish-folder.png" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FilesIcon); playAudio('sounds/bubblesRising.mp3')"">
       <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Files</strong></p>
     </div>
     <!--Game icon-->
     <div class="desktopApp" id="GameIcon" style="text-align: center; padding: 16px; width: 90px">
-      <img src="images/fishbowl-pixel.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FishNotesIcon); playAudio('sounds/bubblesRising.mp3')"">
+      <img src="images/fishbowl-pixel.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(GameIcon); playAudio('sounds/bubblesRising.mp3')"">
       <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Feed the fish</strong></p>
     </div>
    </div>
    <!--Fish Notes app window-->
-   <div id="FishNotes" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px; display: none" class="window">
+   <div id="FishNotes" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px" class="window">
     <div class="header" id="FishNotesheader">
         <img class="handle" src="images/handle.png" id="FishNoteshandle"/> 
         <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="FishNotesclose"/>
@@ -82,22 +82,25 @@
     <h3>Fish Notes</h3>
    </div>
    <!--Finances app window-->
-   <div id="Finances" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px" class="window">
+   <div id="Finances" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px; display: none" class="window">
     <div class="header" id="Financesheader">
         <img class="handle" src="images/handle.png" id="Financeshandle"/> 
         <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="Financesclose"/>
     </div>
     <h3>Finances</h3>
     <button onclick="play()">GO</button>
+    <div style="padding-top: 8px">
     <video id="tadc-fish-scene" width="259px" height="180px">
       <source src="videos/tadc-fish-scene.mp4" type="video/mp4">
     </video>
+    <!--Script for video-->
     <script>
       var myVideo = getElementById("tadc-fish-scene");
      function play() {
-      myVideo.play
+      myVideo.play;
     } 
     </script>
+    </div>
    </div>
    <!--Clicker game window-->
    <div id="Game"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 650px; display: none" class="window">

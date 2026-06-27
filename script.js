@@ -2,7 +2,7 @@
 dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("FishNotes"));
 dragElement(document.getElementById("Game"));
-
+dragElement(document.getElementById("Finances"))
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
   // Step 2: Set up variables to keep track of the element's position.
@@ -54,15 +54,19 @@ function dragElement(element) {
     document.onmousemove = null;
   }
 }
-//Make it possible to open and close welcome screen
+//Setup for opening and closing the windows
 var welcomeScreen = document.querySelector("#welcome")
 var FishNotesScreen = document.querySelector("#FishNotes")
+var FilesScreen = document.querySelector("#Files")
+var FinancesScreen = document.querySelector("#Finances")
+var GameScreen = document.querySelector("#Game")
 function closeWindow(element) {
   element.style.display = "none"
 }
 function openWindow(element) {
   element.style.display = "flex"
 }
+//Make it possible to open and close welcome screen
 var welcomeScreenClose = document.querySelector("#welcomeclose")
 var welcomeScreenOpen = document.querySelector("#welcomeopen")
 welcomeScreenClose.addEventListener("click", function() {
