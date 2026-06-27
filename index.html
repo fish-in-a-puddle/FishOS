@@ -25,7 +25,7 @@
     </style>
     <!--Welcome window-->
     <div id="welcome"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px"; class="window">
-      <div class="header">
+      <div class="header" id="welcomeheader">
         <img class="handle" src="images/handle.png" id="welcomehandle"/> 
         <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="welcomeclose"/>
       </div>
@@ -82,24 +82,25 @@
     <h3>Fish Notes</h3>
    </div>
    <!--Finances app window-->
-   <div id="Finances" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px; display: none" class="window">
+   <div id="Finances" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px" class="window">
     <div class="header" id="Financesheader">
         <img class="handle" src="images/handle.png" id="Financeshandle"/> 
         <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="Financesclose"/>
     </div>
     <h3>Finances</h3>
-    <button onclick="playPause()">GO</button>
+    <button onclick="play()">GO</button>
+    <video id="tadc-fish-scene" width="259px" height="180px">
+      <source src="videos/tadc-fish-scene.mp4" type="video/mp4">
+    </video>
     <script>
-     function playPause() { 
-      if (myVideo.paused) 
-      myVideo.play(); 
-      else 
-    myVideo.pause(); 
+      var myVideo = getElementById("tadc-fish-scene");
+     function play() {
+      myVideo.play
     } 
     </script>
    </div>
    <!--Clicker game window-->
-   <div id="Game"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 650px; display: none"; class="window">
+   <div id="Game"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 650px; display: none" class="window">
       <div class="header" id="Gameheader">
         <img class="handle" src="images/handle.png" id="Gamehandle"/> 
         <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="Gameclose"/>
