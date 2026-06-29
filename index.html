@@ -39,7 +39,7 @@
       </script>
       <p>Welcome, welcome. You're probably wondering why I've gathered you all here today. Well, I didn't. You all came here of your own free will and terrible judgement.</p>
       <p>But if you want to stick around, suit yourself. Just remember that I am not legally responsible for any injuries, mental or physical, that may occur yadda yadda you know.</p>
-      <a href="https://stardance.hackclub.com/@just-a-fish">Anyways I like to talk if you want to say hi</a>
+      <a href="https://stardance.hackclub.com/@fish-in-a-puddle">Anyways I like to talk if you want to say hi</a>
     </div>
     <!--Top bar-->
     <div style="position: absolute; width: 97.5%; height: 30px; display: flex; background-color: rgba(119, 196, 224, 1.0); color: #000000; border: solid; border-radius: 6px; border-color: black; justify-content: space-between; align-items: center" class="topBar">
@@ -54,27 +54,27 @@
    <div style="padding-top: 40px; padding-left: 40px; padding-right: 40px; padding-bottom: 40px; display: flex; flex-wrap: wrap; justify-content: flex-start;">
     <!--Fish Notes app icon-->
     <div class="desktopApp" id="FishNotesIcon" style="text-align: center; padding: 16px; width: 90px">
-      <img src="images/fishNotes.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FishNotesIcon); playAudio('sounds/bubblesRising.mp3')"">
+      <img src="images/fishNotes.jpg" id="FishNotesopen" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FishNotesIcon); playAudio('sounds/bubblesRising.mp3')">
       <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Notes</strong></p>
     </div>
     <!--Finances Icon-->
     <div class="desktopApp" id="FinancesIcon" style="text-align: center; padding: 16px; width: 90px">
-      <img src="images/money-fish.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FinancesIcon); playAudio('sounds/bubblesRising.mp3')"">
+      <img src="images/money-fish.jpg" id="Financesopen" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FinancesIcon); playAudio('sounds/bubblesRising.mp3')">
       <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Finances</strong></p>
     </div>
     <!--Files Icon-->
     <div class="desktopApp" id="FilesIcon" style="text-align: center; padding: 16px; width: 90px">
-      <img src="images/fish-folder.png" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FilesIcon); playAudio('sounds/bubblesRising.mp3')"">
+      <img src="images/fish-folder.png" id="Filesopen" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(FilesIcon); playAudio('sounds/bubblesRising.mp3')">
       <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Fish Files</strong></p>
     </div>
     <!--Game icon-->
     <div class="desktopApp" id="GameIcon" style="text-align: center; padding: 16px; width: 90px">
-      <img src="images/fishbowl-pixel.jpg" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(GameIcon); playAudio('sounds/bubblesRising.mp3')"">
+      <img src="images/fishbowl-pixel.jpg" id="Gameopen" style="width: 75px; height: 75px; border: solid; border-color: black; border-width: 2px; border-radius: 100px " onclick="handleIconTap(GameIcon); playAudio('sounds/bubblesRising.mp3')">
       <p style="text-shadow: -1px -1px 0 #77C4E0, 1px -1px 0 #77C4E0, -1px 1px 0 #77C4E0, 1px 1px 0 #77C4E0;"><strong>Feed the fish</strong></p>
     </div>
    </div>
    <!--Fish Notes app window-->
-   <div id="FishNotes" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px" class="window">
+   <div id="FishNotes" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 600px" class="closedWindow">
     <div class="header" id="FishNotesheader">
         <img class="handle" src="images/handle.png" id="FishNoteshandle"/> 
         <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="FishNotesclose"/>
@@ -82,7 +82,7 @@
     <h3>Fish Notes</h3>
    </div>
    <!--Finances app window-->
-   <div id="Finances" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 600px; display: none" class="window">
+   <div id="Finances" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 600px" class="closedWindow">
     <div class="header" id="Financesheader">
         <img class="handle" src="images/handle.png" id="Financeshandle"/> 
         <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="Financesclose"/>
@@ -90,7 +90,7 @@
     <h3>Finances</h3>
     <button onclick="play()">GO</button>
     <div style="padding-top: 8px">
-    <video id="tadc-fish-scene" width="259px" height="180px">
+    <video id="tadc-fish-scene" width="518px" height="360px">
       <source src="videos/tadc-fish-scene.mp4" type="video/mp4">
     </video>
     <!--Script for video-->
@@ -103,7 +103,7 @@
     </div>
    </div>
    <!--Clicker game window-->
-   <div id="Game"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 650px; display: none" class="window">
+   <div id="Game"; style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);transform: translate(-50%, -50%); width: 650px" class="window">
       <div class="header" id="Gameheader">
         <img class="handle" src="images/handle.png" id="Gamehandle"/> 
         <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="Gameclose"/>
@@ -116,7 +116,7 @@
         let score = 0;
         const fish = document.getElementById('fishToBeFed');
         const scoreDisplay = document.getElementById('scoreDisplay');
-        const endGame = document.getElementById('GameClose');
+        const endGame = document.getElementById('Gameclose');
         fish.addEventListener('click', () => {
           score++;
           scoreDisplay.textContent = score;
@@ -127,6 +127,14 @@
         })
       </script>
     </div>
+    <!--Files window-->
+    <div id="Files" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 600px" class="closedWindow">
+    <div class="header" id="FishNotesheader">
+        <img class="handle" src="images/handle.png" id="Fileshandle"/> 
+        <img class="closeButton"; src="images/dead-fish.png" onclick="playAudio('sounds/bubblePop.mp3')" id="Filesclose"/>
+    </div>
+    <h3>Fish Notes</h3>
+   </div>
    <!--Script for updating time-->
 	 <script>
 		function updateTime() {

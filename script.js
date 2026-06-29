@@ -61,37 +61,39 @@ var FilesScreen = document.querySelector("#Files")
 var FinancesScreen = document.querySelector("#Finances")
 var GameScreen = document.querySelector("#Game")
 function closeWindow(element) {
-  element.style.display = "none"
+  element.classList.remove("window")
+  element.classList.add("closedWindow")
 }
 function openWindow(element) {
-  element.style.display = "flex"
+  element.classList.remove("closedWindow");
+  element.classList.add("window");
 }
 //Make it possible to open and close welcome screen
 var welcomeScreenClose = document.querySelector("#welcomeclose")
 var welcomeScreenOpen = document.querySelector("#welcomeopen")
-welcomeScreenClose.addEventListener("click", function() {
+welcomeScreenClose.addEventListener("click", () => {
   closeWindow(welcomeScreen);
 });
-welcomeScreenOpen.addEventListener("click", function() {
+welcomeScreenOpen.addEventListener("click", () => {
   openWindow(welcomeScreen);
 });
 //Make it possible to open and close Fish Notes screen
 var FishNotesScreenClose = document.querySelector("#FishNotesclose")
 var FishNotesScreenOpen = document.querySelector("#FishNotesopen")
-FishNotesScreenClose.addEventListener("click", function() {
-  closeWindow(FishNotes);
+FishNotesScreenClose.addEventListener("click", () => {
+  closeWindow(FishNotesScreen);
 });
-FishNotesScreenOpen.addEventListener("click", function() {
-  openWindow(FishNotes);
+FishNotesScreenOpen.addEventListener("click", () => {
+  openWindow(FishNotesScreen);
 });
 //Make it possible to open and close game screen
-var GameScreenClose = document.querySelector("#FishNotesclose")
-var GameScreenOpen = document.querySelector("#FishNotesopen")
-GameScreenClose.addEventListener("click", function() {
-  closeWindow(Game);
+var GameScreenClose = document.querySelector("#Gameclose")
+var GameScreenOpen = document.querySelector("#Gameopen")
+GameScreenClose.addEventListener("click", () => {
+  closeWindow(GameScreen);
 });
-GameScreenOpen.addEventListener("click", function() {
-  openWindow(Game);
+GameScreenOpen.addEventListener("click", () => {
+  openWindow(GameScreen);
 });
 //Handle whether or not an icon is selected and what to do with it
 var selectedIcon = undefined
